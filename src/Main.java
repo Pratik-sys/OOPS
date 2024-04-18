@@ -31,8 +31,17 @@ public class Main {
         objCar.setCylinders(4);
         objCar.setSeatingCapacity(4);
         objCar.setFuelCapacity("37 L");
-        
+
         System.out.println(objCar);
+
+        Circle objCircle = new Circle("red", 5);
+        objCircle.display();
+        System.out.println("Area of a Circle is : " + objCircle.calculateArea());
+        
+        Rectangle objeRectangle = new Rectangle("blue", 12, 12);
+        objeRectangle.display();
+        System.out.println("Area of the Rectangle : " + objeRectangle.calculateArea());
+
 
     }
 }
