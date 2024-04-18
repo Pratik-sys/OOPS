@@ -3,6 +3,21 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, CsvException {
+        Truck mytruck = getMytruck();
+        System.out.println(mytruck);
+        Cars getCar = getMyCars();
+        System.out.println(getCar);
+
+        Circle objCircle = new Circle("red", 5);
+        objCircle.display();
+        System.out.println("Area of a Circle is : " + objCircle.calculateArea());
+        
+        Rectangle objeRectangle = new Rectangle("blue", 12, 12);
+        objeRectangle.display();
+        System.out.println("Area of the Rectangle : " + objeRectangle.calculateArea());
+    }
+
+    private static Truck getMytruck() {
         Truck mytruck = new Truck();
         mytruck.setName("Swift");
         mytruck.setModel("ZXi + AMT");
@@ -16,9 +31,9 @@ public class Main {
         mytruck.setSeatingCapacity(4);
         mytruck.setFuelCapacity("37 L");
         mytruck.LoadCargo(500);
-
-        System.out.println(mytruck);
-
+        return mytruck;
+    }
+    private  static  Cars getMyCars(){
         Cars objCar = new Cars();
         objCar.setName("Swift");
         objCar.setModel("ZXi + AMT");
@@ -31,17 +46,6 @@ public class Main {
         objCar.setCylinders(4);
         objCar.setSeatingCapacity(4);
         objCar.setFuelCapacity("37 L");
-
-        System.out.println(objCar);
-
-        Circle objCircle = new Circle("red", 5);
-        objCircle.display();
-        System.out.println("Area of a Circle is : " + objCircle.calculateArea());
-        
-        Rectangle objeRectangle = new Rectangle("blue", 12, 12);
-        objeRectangle.display();
-        System.out.println("Area of the Rectangle : " + objeRectangle.calculateArea());
-
-
+        return  objCar;
     }
 }
