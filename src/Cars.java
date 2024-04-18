@@ -1,4 +1,8 @@
 public class Cars extends  Engine {
+    private String name;
+    private  String model;
+    private Colors colors;
+    private  float price;
 
     public String getName() {
         return name;
@@ -31,24 +35,17 @@ public class Cars extends  Engine {
     public void setPrice(float price) {
         this.price = price;
     }
-
-    private String name;
-    private  String model;
-    private Colors colors;
-    private  float price;
+    public Cars(){}
 
     public Cars(String name, String model, Colors colors, float price,
-                String engineType,String fuelType,String emissionType, String capacity,int cylinders) {
-        super(engineType,fuelType,emissionType,capacity,cylinders);
+                String engineType,String fuelType,String emissionType, String capacity,int cylinders,
+                int seatCapacity, String fuelCapacity) {
+        super(engineType,fuelType,emissionType,capacity,cylinders, seatCapacity, fuelCapacity);
         this.name = name;
         this.model = model;
         this.colors = colors;
         this.price = price;
     }
-    public Cars(){
-        super();
-    }
-
     @Override
     public String toString() {
         return  "Cars{" +

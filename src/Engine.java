@@ -1,6 +1,11 @@
-import java.security.PublicKey;
 
-public class Engine{
+public class Engine extends Capacities{
+
+    private String engineType;
+    private  String fuelType;
+    private String emissionType;
+    private  String capacity;
+    private  int cylinders;
 
     public String getEngineType() {
         return engineType;
@@ -42,23 +47,16 @@ public class Engine{
         this.cylinders = cylinders;
     }
 
-    private String engineType;
-    private  String fuelType;
-    private String emissionType;
-    private  String capacity;
-    private  int cylinders;
+    public Engine() {}
 
-    public Engine(String engineType, String fuelType, String emissionType, String capacity, int cylinders) {
+    public Engine(String engineType, String fuelType, String emissionType, String capacity, int cylinders, int seatingCapacity, String fuelCapacity) {
+        super(seatingCapacity, fuelCapacity);
         this.engineType = engineType;
         this.fuelType = fuelType;
         this.emissionType = emissionType;
         this.capacity = capacity;
         this.cylinders = cylinders;
     }
-    public Engine() {
-
-    }
-
     @Override
     public String toString() {
         return "Engine{" +
@@ -67,6 +65,6 @@ public class Engine{
                 ", emissionType='" + emissionType + '\'' +
                 ", capacity='" + capacity + '\'' +
                 ", cylinders=" + cylinders +
-                '}';
+                '}' + "Capacities =" +  '\n' + super.toString();
     }
 }
